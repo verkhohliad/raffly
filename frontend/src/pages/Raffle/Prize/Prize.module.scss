@@ -1,0 +1,12 @@
+@use 'styles/variables';
+
+.prize {
+  margin: 35px 50px 0 0;
+
+  @media (max-width: variables.$lg-screen) {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

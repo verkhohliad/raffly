@@ -1,0 +1,33 @@
+@use 'styles/variables';
+@use 'styles/fn';
+
+.countdown {
+  display: flex;
+
+  .countdown__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .countdown__number {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background-color: variables.$background-color-element;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .countdown__text {
+      color: variables.$font-color-secondary;
+      font-size: fn.get-font-size("sm");
+    }
+  }
+
+  .countdown__divider {
+    margin: 6px 4px;
+    color: variables.$font-color-secondary;
+  }
+}

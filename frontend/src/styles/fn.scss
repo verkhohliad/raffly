@@ -1,0 +1,31 @@
+@function px-to-rem($px) {
+  @return calc($px / 16px) * 1rem;
+}
+
+@function rem-to-px($rem) {
+  @return calc($rem / 1rem) * 16px;
+}
+
+@function get-font-size($size) {
+  @if($size == "sm") {
+    @return px-to-rem(12px);
+  } @else if($size == "md") {
+    @return px-to-rem(14px);
+  } @else if($size == "lg") {
+    @return px-to-rem(16px);
+  } @else if($size == "xl") {
+    @return px-to-rem(18px);
+  } @else if($size == "xxl") {
+    @return px-to-rem(20px);
+  } @else if($size == "xxxl") {
+    @return px-to-rem(24px);
+  } @else if($size == "xxxxl") {
+    @return px-to-rem(32px);
+  } @else if($size == "xxxxxl") {
+    @return px-to-rem(48px);
+  } @else if($size == "huge") {
+    @return px-to-rem(54px);
+  } @else {
+    @return px-to-rem(16px);
+  }
+}

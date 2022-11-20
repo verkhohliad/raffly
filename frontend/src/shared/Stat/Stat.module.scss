@@ -1,0 +1,27 @@
+@use 'styles/variables';
+@use 'styles/fn';
+
+.stat {
+  width: 180px;
+  margin-right: 60px;
+
+  @media (max-width: variables.$sm-screen) {
+    width: 140px;
+    margin-right: 40px;
+  }
+
+  .label {
+    color: variables.$font-color-secondary;
+    margin-bottom: 8px;
+  }
+
+  .valueWrapper {
+    display: flex;
+    align-items: center;
+
+    .value {
+      margin-left: 10px;
+      font-size: fn.get-font-size("xxxl");
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use 'styles/variables';
+
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+
+  width: 25px;
+  height: 25px;
+  background: variables.$background-color;
+  border-radius: 8px;
+
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em variables.$primary-color;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+
+  &:checked::before {
+    transform: scale(1);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

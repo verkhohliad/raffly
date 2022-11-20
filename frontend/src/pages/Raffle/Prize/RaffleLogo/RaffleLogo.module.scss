@@ -1,0 +1,26 @@
+@use 'styles/variables';
+
+.raffleLogoWrapper {
+  background-color: variables.$secondary-color;
+  height: 479px;
+  width: 479px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: variables.$sm-screen) {
+    height: 152px;
+    width: 335px;
+  }
+
+  .raffleLogo {
+    height: 347px;
+    width: 315px;
+
+    @media (max-width: variables.$sm-screen) {
+      height: 112px;
+      width: 102px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use 'styles/variables';
+@use 'styles/fn';
+
+.input {
+  background-color: variables.$background-color;
+  border: 0;
+  border-radius: 14px;
+  color: variables.$font-color;
+  font-size: fn.get-font-size("lg");
+  padding: 28px 16px 10px 16px;
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px solid variables.$primary-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.label {
+  font-size: fn.get-font-size("sm");
+  color: variables.$font-color-secondary;
+  position: absolute;
+  padding: 7px 16px;
+}

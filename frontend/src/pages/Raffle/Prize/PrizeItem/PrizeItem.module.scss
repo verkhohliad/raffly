@@ -1,0 +1,34 @@
+@use 'styles/variables';
+@use 'styles/fn';
+
+.prizeItem {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+
+  .leftImg, .rightImg {
+    width: 97px;
+    height: 72px;
+  }
+
+  .prizeDetails {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .prizeTitle {
+      color: variables.$font-color-secondary;
+    }
+
+    .prizeAmount {
+      font-size: fn.get-font-size("xxxxxl");
+      font-weight: 600;
+
+      background: variables.$primary-element-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}

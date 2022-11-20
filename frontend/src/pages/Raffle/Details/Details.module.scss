@@ -1,0 +1,28 @@
+@use 'styles/fn';
+@use 'styles/variables';
+
+.details {
+  //margin: 30px;
+
+  .title {
+    margin-bottom: 30px;
+
+    .titleText {
+      font-size: fn.get-font-size("huge");
+      font-family: 'Ailerons', sans-serif;
+      margin-bottom: 10px;
+
+      @media (max-width: variables.$sm-screen) {
+        font-size: fn.get-font-size("xxxxl");
+      }
+
+      .round {
+        color: variables.$font-color-secondary;
+      }
+    }
+
+    .description {
+      color: variables.$font-color-secondary;
+    }
+  }
+}

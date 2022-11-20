@@ -1,0 +1,69 @@
+@use 'styles/variables';
+@use 'styles/fn';
+
+.participation {
+  width: 450px;
+  border-radius: 20px;
+  background-color: variables.$background-color-element;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+
+  @media (max-width: variables.$sm-screen) {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+  }
+
+  .title {
+
+    .title__text {
+      font-size: fn.get-font-size("lg");
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .title__description {
+      color: variables.$font-color-secondary;
+      margin-bottom: 14px;
+
+      @media (max-width: variables.$sm-screen) {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .ticket__form {
+    display: flex;
+    margin-bottom: 16px;
+
+    .ticket__input {
+      width: 320px;
+      margin-right: 14px;
+
+      @media (max-width: variables.$sm-screen) {
+        width: 232px;
+      }
+    }
+
+    .ticket__button {
+      width: 80px;
+      font-size: fn.get-font-size("lg");
+      font-weight: 600;
+    }
+  }
+
+  .auto_prolong {
+    display: flex;
+    align-items: center;
+
+    .auto_prolong__checkbox {
+      margin-right: 10px;
+    }
+
+    .auto_prolong__label {
+      color: variables.$font-color-secondary;
+    }
+  }
+}

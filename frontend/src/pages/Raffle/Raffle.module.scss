@@ -1,0 +1,22 @@
+@use 'styles/variables';
+
+.raffle {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: variables.$lg-screen) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    margin-top: 43px;
+    margin-right: 27px;
+
+    @media (max-width: variables.$lg-screen) {
+      margin-top: 30px;
+      margin-right: 0;
+      height: 700px;
+    }
+  }
+}

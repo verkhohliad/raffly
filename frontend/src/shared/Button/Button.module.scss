@@ -1,0 +1,21 @@
+@use 'styles/variables';
+@use 'styles/fn';
+
+.button {
+  background: variables.$primary-element-color;
+  color: variables.$background-color;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: fn.get-font-size("md");
+  padding: 10px;
+
+  &:hover {
+    background: variables.$hover-element-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: variables.$disabled-element-color;
+  }
+}

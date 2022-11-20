@@ -1,0 +1,38 @@
+@use 'styles/variables';
+@use 'styles/fn';
+
+.tickets {
+  width: 100%;
+
+  @media (max-width: variables.$sm-screen) {
+    margin-bottom: 220px;
+  }
+
+  .title {
+    font-size: fn.get-font-size("xl");
+    font-weight: 600;
+    margin-left: 30px;
+
+    @media (max-width: variables.$sm-screen) {
+      margin-left: 0;
+    }
+  }
+
+  .ticketsWrapper {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    .ticket {
+      width: 48%;
+      height: 58px;
+      background-color: variables.$background-color-element;
+      margin: 14px 0;
+      border-radius: 10px;
+      font-size: fn.get-font-size("lg");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

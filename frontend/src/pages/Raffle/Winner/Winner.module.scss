@@ -1,0 +1,83 @@
+@use 'styles/variables' as *;
+@use 'styles/fn' as *;
+
+.winnerWrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
+
+.winner {
+  width: fit-content;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  background-color: $background-color-element;
+  border-radius: 8px;
+  margin-bottom: 51px;
+  cursor: pointer;
+
+  .winnerLogoWrapper {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    background-color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 6px 3px 3px;
+
+    .winnerLogo {
+      width: 19px;
+      height: 25px;
+    }
+  }
+
+  .label {
+    color: $font-color-secondary;
+    margin-right: 10px;
+  }
+}
+
+.overlay {
+  background-color: rgba(31, 31, 35, 0.62) !important;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .modalLogoWrapper {
+    width: 392px;
+    height: 231px;
+    background-color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    .modalLogo {
+      width: 137px;
+      height: 183px;
+    }
+  }
+
+  .pair {
+    font-weight: 500;
+    font-size: get-font-size("xxl");
+    margin-bottom: 10px;
+    color: $font-color;
+
+    .value {
+      font-weight: 600;
+      color: $primary-color;
+    }
+  }
+}
+

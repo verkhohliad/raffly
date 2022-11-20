@@ -1,0 +1,38 @@
+@use 'styles/variables';
+@use 'styles/fn';
+@import './fonts';
+
+body, button, input, textarea {
+  font-family: 'Gilroy', sans-serif;
+  font-size: fn.get-font-size("md");
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#root {
+  background-color: variables.$background-color;
+  color: variables.$font-color;
+  min-height: 100vh;
+}
+
+.react-confirm-alert-button-group {
+  display: none;
+}
+
+.react-confirm-alert-body {
+  background-color: variables.$background-color-element;
+  border-radius: 20px;
+  padding: 10px;
+}

@@ -1,0 +1,21 @@
+@use 'styles/variables';
+
+.header {
+  background-color: variables.$background-color-element;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    height: 51px;
+    width: 51px;
+    margin-left: 20px;
+  }
+
+  .connect {
+    min-width: 100px;
+    margin-right: 20px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,19 @@
+@use 'styles/variables';
+
+.iconWrapper {
+  background-color: variables.$background-color-element;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
